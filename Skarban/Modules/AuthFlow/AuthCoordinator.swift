@@ -12,6 +12,7 @@ final class AuthCoordinator: Coordinator {
 
     // MARK: - Properties -
 
+    var viewController: UIViewController
     var rootViewController: UIViewController?
     private let authService: AuthenticationService
 
@@ -19,9 +20,10 @@ final class AuthCoordinator: Coordinator {
 
     init(globalContext: GlobalContext) {
         self.authService = globalContext.authService
+        let viewModel = LoginViewModel(authService: globalContext.authService)
+        let view = LoginView(viewModel: viewModel)
+        self.viewController = UIHostingController(rootView: view)
     }
-
-    var viewController: UIViewController = UIHostingController(rootView: LoginView())
 
     func start() {
         self.rootViewController?.present(self.viewController, animated: true)

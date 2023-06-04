@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 
 final class AuthenticationService: AppService {
 
@@ -15,6 +16,8 @@ final class AuthenticationService: AppService {
 
     @Published var state: AuthenticationState = .notAuthenticated
 
+    private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.shiaulis.Skarban", category: "AuthenticationService")
+
     // MARK: - AppService API
 
     func load() async throws {}
@@ -22,5 +25,11 @@ final class AuthenticationService: AppService {
     func start() async throws {}
 
     func stop() async {}
+
+    // MARK: - Public API -
+
+    func login(email: String, password: String) {
+        self.logger.debug("Login not implemented yet. Login: \(email), password: \(password)")
+    }
 
 }

@@ -100,20 +100,20 @@
 		B13D12A429AD45EA004ED670 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B1EDB8412A2BF6E3004B7FAD /* Login */,
+				B1EDB8412A2BF6E3004B7FAD /* AuthFlow */,
 				B1FD065129ABE4E200180914 /* SkarbList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		B1EDB8412A2BF6E3004B7FAD /* Login */ = {
+		B1EDB8412A2BF6E3004B7FAD /* AuthFlow */ = {
 			isa = PBXGroup;
 			children = (
 				B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */,
 				B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */,
 				B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */,
 			);
-			path = Login;
+			path = AuthFlow;
 			sourceTree = "<group>";
 		};
 		B1FD062629ABE1BF00180914 = {
