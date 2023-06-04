@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SkarbListViewController.swift
 //  Skarban
 //
 //  Created by Andrius Shiaulis on 26.02.2023.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class SkarbListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .green
     }
 
-
 }
-

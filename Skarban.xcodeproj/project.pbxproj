@@ -7,25 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13D129B29AD44E4004ED670 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D129A29AD44E4004ED670 /* AppService.swift */; };
+		B13D129D29AD44FC004ED670 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D129C29AD44FC004ED670 /* Coordinator.swift */; };
+		B13D129F29AD4511004ED670 /* SkarbanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D129E29AD4511004ED670 /* SkarbanError.swift */; };
+		B1EDB83C2A2BEF98004B7FAD /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = B1EDB83B2A2BEF98004B7FAD /* Appwrite */; };
+		B1EDB83E2A2BF309004B7FAD /* AppwriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB83D2A2BF309004B7FAD /* AppwriteService.swift */; };
+		B1EDB8402A2BF604004B7FAD /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB83F2A2BF604004B7FAD /* AuthenticationService.swift */; };
+		B1EDB8452A2BF748004B7FAD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */; };
+		B1EDB8472A2BF8F7004B7FAD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */; };
+		B1EDB8492A2BF99C004B7FAD /* SkarbListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8482A2BF99C004B7FAD /* SkarbListView.swift */; };
+		B1EDB84B2A2CCC09004B7FAD /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */; };
+		B1EDB84D2A2CD03F004B7FAD /* GlobalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB84C2A2CD03F004B7FAD /* GlobalContext.swift */; };
 		B1FD063329ABE1BF00180914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063229ABE1BF00180914 /* AppDelegate.swift */; };
 		B1FD063529ABE1BF00180914 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063429ABE1BF00180914 /* SceneDelegate.swift */; };
-		B1FD063729ABE1BF00180914 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063629ABE1BF00180914 /* ViewController.swift */; };
-		B1FD063A29ABE1BF00180914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FD063829ABE1BF00180914 /* Main.storyboard */; };
 		B1FD063D29ABE1BF00180914 /* Skarban.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063B29ABE1BF00180914 /* Skarban.xcdatamodeld */; };
 		B1FD063F29ABE1C000180914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FD063E29ABE1C000180914 /* Assets.xcassets */; };
 		B1FD064229ABE1C000180914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FD064029ABE1C000180914 /* LaunchScreen.storyboard */; };
+		B1FD064A29ABE30D00180914 /* ApplicationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD064929ABE30D00180914 /* ApplicationCore.swift */; };
+		B1FD064E29ABE4D500180914 /* SkarbListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD064D29ABE4D500180914 /* SkarbListCoordinator.swift */; };
+		B1FD065029ABE4DD00180914 /* SkarbListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD064F29ABE4DD00180914 /* SkarbListViewModel.swift */; };
+		B1FD065529ABE93600180914 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD065429ABE93600180914 /* DatabaseService.swift */; };
+		B1FD065729ABEB1D00180914 /* NSPersistentCloudKitContainer+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD065629ABEB1D00180914 /* NSPersistentCloudKitContainer+Async.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B13D129A29AD44E4004ED670 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		B13D129C29AD44FC004ED670 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B13D129E29AD4511004ED670 /* SkarbanError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbanError.swift; sourceTree = "<group>"; };
+		B1EDB83D2A2BF309004B7FAD /* AppwriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteService.swift; sourceTree = "<group>"; };
+		B1EDB83F2A2BF604004B7FAD /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B1EDB8482A2BF99C004B7FAD /* SkarbListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbListView.swift; sourceTree = "<group>"; };
+		B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		B1EDB84C2A2CD03F004B7FAD /* GlobalContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContext.swift; sourceTree = "<group>"; };
 		B1FD062F29ABE1BF00180914 /* Skarban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skarban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FD063229ABE1BF00180914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1FD063429ABE1BF00180914 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B1FD063629ABE1BF00180914 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B1FD063929ABE1BF00180914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1FD063C29ABE1BF00180914 /* Skarban.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skarban.xcdatamodel; sourceTree = "<group>"; };
 		B1FD063E29ABE1C000180914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FD064129ABE1C000180914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1FD064329ABE1C000180914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1FD064929ABE30D00180914 /* ApplicationCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCore.swift; sourceTree = "<group>"; };
+		B1FD064D29ABE4D500180914 /* SkarbListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbListCoordinator.swift; sourceTree = "<group>"; };
+		B1FD064F29ABE4DD00180914 /* SkarbListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbListViewModel.swift; sourceTree = "<group>"; };
+		B1FD065429ABE93600180914 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		B1FD065629ABEB1D00180914 /* NSPersistentCloudKitContainer+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentCloudKitContainer+Async.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +60,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EDB83C2A2BEF98004B7FAD /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13D12A129AD45AB004ED670 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD065629ABEB1D00180914 /* NSPersistentCloudKitContainer+Async.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B13D12A229AD45BB004ED670 /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD065429ABE93600180914 /* DatabaseService.swift */,
+				B13D129A29AD44E4004ED670 /* AppService.swift */,
+				B1EDB83D2A2BF309004B7FAD /* AppwriteService.swift */,
+				B1EDB83F2A2BF604004B7FAD /* AuthenticationService.swift */,
+			);
+			path = AppServices;
+			sourceTree = "<group>";
+		};
+		B13D12A329AD45CC004ED670 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD064929ABE30D00180914 /* ApplicationCore.swift */,
+				B13D129E29AD4511004ED670 /* SkarbanError.swift */,
+				B13D129C29AD44FC004ED670 /* Coordinator.swift */,
+				B1EDB84C2A2CD03F004B7FAD /* GlobalContext.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B13D12A429AD45EA004ED670 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B1EDB8412A2BF6E3004B7FAD /* Login */,
+				B1FD065129ABE4E200180914 /* SkarbList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B1EDB8412A2BF6E3004B7FAD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */,
+				B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */,
+				B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		B1FD062629ABE1BF00180914 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +137,26 @@
 			children = (
 				B1FD063229ABE1BF00180914 /* AppDelegate.swift */,
 				B1FD063429ABE1BF00180914 /* SceneDelegate.swift */,
-				B1FD063629ABE1BF00180914 /* ViewController.swift */,
-				B1FD063829ABE1BF00180914 /* Main.storyboard */,
 				B1FD063E29ABE1C000180914 /* Assets.xcassets */,
 				B1FD064029ABE1C000180914 /* LaunchScreen.storyboard */,
 				B1FD064329ABE1C000180914 /* Info.plist */,
 				B1FD063B29ABE1BF00180914 /* Skarban.xcdatamodeld */,
+				B13D12A329AD45CC004ED670 /* Root */,
+				B13D12A429AD45EA004ED670 /* Modules */,
+				B13D12A229AD45BB004ED670 /* AppServices */,
+				B13D12A129AD45AB004ED670 /* Extensions */,
 			);
 			path = Skarban;
+			sourceTree = "<group>";
+		};
+		B1FD065129ABE4E200180914 /* SkarbList */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD064D29ABE4D500180914 /* SkarbListCoordinator.swift */,
+				B1FD064F29ABE4DD00180914 /* SkarbListViewModel.swift */,
+				B1EDB8482A2BF99C004B7FAD /* SkarbListView.swift */,
+			);
+			path = SkarbList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +175,9 @@
 			dependencies = (
 			);
 			name = Skarban;
+			packageProductDependencies = (
+				B1EDB83B2A2BEF98004B7FAD /* Appwrite */,
+			);
 			productName = Skarban;
 			productReference = B1FD062F29ABE1BF00180914 /* Skarban.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +206,9 @@
 				Base,
 			);
 			mainGroup = B1FD062629ABE1BF00180914;
+			packageReferences = (
+				B1EDB83A2A2BEF98004B7FAD /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+			);
 			productRefGroup = B1FD063029ABE1BF00180914 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +225,6 @@
 			files = (
 				B1FD064229ABE1C000180914 /* LaunchScreen.storyboard in Resources */,
 				B1FD063F29ABE1C000180914 /* Assets.xcassets in Resources */,
-				B1FD063A29ABE1BF00180914 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +235,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FD063729ABE1BF00180914 /* ViewController.swift in Sources */,
+				B1EDB84D2A2CD03F004B7FAD /* GlobalContext.swift in Sources */,
+				B1FD065529ABE93600180914 /* DatabaseService.swift in Sources */,
+				B13D129D29AD44FC004ED670 /* Coordinator.swift in Sources */,
+				B1FD064A29ABE30D00180914 /* ApplicationCore.swift in Sources */,
 				B1FD063329ABE1BF00180914 /* AppDelegate.swift in Sources */,
+				B1EDB84B2A2CCC09004B7FAD /* AuthCoordinator.swift in Sources */,
+				B1EDB83E2A2BF309004B7FAD /* AppwriteService.swift in Sources */,
+				B1FD064E29ABE4D500180914 /* SkarbListCoordinator.swift in Sources */,
+				B1EDB8452A2BF748004B7FAD /* LoginViewModel.swift in Sources */,
 				B1FD063D29ABE1BF00180914 /* Skarban.xcdatamodeld in Sources */,
+				B1EDB8492A2BF99C004B7FAD /* SkarbListView.swift in Sources */,
+				B13D129F29AD4511004ED670 /* SkarbanError.swift in Sources */,
+				B13D129B29AD44E4004ED670 /* AppService.swift in Sources */,
+				B1EDB8402A2BF604004B7FAD /* AuthenticationService.swift in Sources */,
 				B1FD063529ABE1BF00180914 /* SceneDelegate.swift in Sources */,
+				B1FD065029ABE4DD00180914 /* SkarbListViewModel.swift in Sources */,
+				B1EDB8472A2BF8F7004B7FAD /* LoginView.swift in Sources */,
+				B1FD065729ABEB1D00180914 /* NSPersistentCloudKitContainer+Async.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B1FD063829ABE1BF00180914 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1FD063929ABE1BF00180914 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B1FD064029ABE1C000180914 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +396,7 @@
 				INFOPLIST_FILE = Skarban/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +424,7 @@
 				INFOPLIST_FILE = Skarban/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1EDB83A2A2BEF98004B7FAD /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1EDB83B2A2BEF98004B7FAD /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EDB83A2A2BEF98004B7FAD /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			productName = Appwrite;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B1FD063B29ABE1BF00180914 /* Skarban.xcdatamodeld */ = {
