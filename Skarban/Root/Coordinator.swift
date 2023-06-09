@@ -13,19 +13,9 @@ protocol Coordinator: AnyObject {
 
     init(globalContext: GlobalContext)
 
-    var viewController: UIViewController { get }
-    var rootViewController: UIViewController? { get set }
+    var rootViewController: UIViewController! { get set }
 
     func start()
     func stop()
     
-}
-
-extension Coordinator {
-
-    var rootViewController: UIViewController? {
-        get { nil }
-        set {}
-    }
-
 }

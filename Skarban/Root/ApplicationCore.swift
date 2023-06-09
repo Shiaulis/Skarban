@@ -35,7 +35,7 @@ final class ApplicationCore {
 
     func start(_ scene: UIScene, in window: UIWindow) {
         let skarbListCoordinator = SkarbListCoordinator(globalContext: self.globalContext)
-        window.rootViewController = skarbListCoordinator.viewController
+        window.rootViewController = skarbListCoordinator.skarbListViewController
         rootSceneCoordinators.append(skarbListCoordinator)
         window.makeKeyAndVisible()
         skarbListCoordinator.start()

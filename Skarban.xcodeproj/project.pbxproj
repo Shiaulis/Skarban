@@ -12,12 +12,16 @@
 		B13D129F29AD4511004ED670 /* SkarbanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D129E29AD4511004ED670 /* SkarbanError.swift */; };
 		B1EDB83C2A2BEF98004B7FAD /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = B1EDB83B2A2BEF98004B7FAD /* Appwrite */; };
 		B1EDB83E2A2BF309004B7FAD /* AppwriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB83D2A2BF309004B7FAD /* AppwriteService.swift */; };
-		B1EDB8402A2BF604004B7FAD /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB83F2A2BF604004B7FAD /* AuthenticationService.swift */; };
+		B1EDB8402A2BF604004B7FAD /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB83F2A2BF604004B7FAD /* AuthenticationController.swift */; };
 		B1EDB8452A2BF748004B7FAD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */; };
 		B1EDB8472A2BF8F7004B7FAD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */; };
 		B1EDB8492A2BF99C004B7FAD /* SkarbListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8482A2BF99C004B7FAD /* SkarbListView.swift */; };
 		B1EDB84B2A2CCC09004B7FAD /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */; };
 		B1EDB84D2A2CD03F004B7FAD /* GlobalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB84C2A2CD03F004B7FAD /* GlobalContext.swift */; };
+		B1EDB84F2A2CF9C0004B7FAD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB84E2A2CF9C0004B7FAD /* SignUpView.swift */; };
+		B1EDB8512A2CF9D4004B7FAD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8502A2CF9D4004B7FAD /* SignUpViewModel.swift */; };
+		B1EDB8532A2D0956004B7FAD /* AccountNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8522A2D0956004B7FAD /* AccountNetworkClient.swift */; };
+		B1EDB8562A2D4112004B7FAD /* AccountDatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EDB8552A2D4112004B7FAD /* AccountDatabaseClient.swift */; };
 		B1FD063329ABE1BF00180914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063229ABE1BF00180914 /* AppDelegate.swift */; };
 		B1FD063529ABE1BF00180914 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063429ABE1BF00180914 /* SceneDelegate.swift */; };
 		B1FD063D29ABE1BF00180914 /* Skarban.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1FD063B29ABE1BF00180914 /* Skarban.xcdatamodeld */; };
@@ -35,12 +39,16 @@
 		B13D129C29AD44FC004ED670 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B13D129E29AD4511004ED670 /* SkarbanError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbanError.swift; sourceTree = "<group>"; };
 		B1EDB83D2A2BF309004B7FAD /* AppwriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteService.swift; sourceTree = "<group>"; };
-		B1EDB83F2A2BF604004B7FAD /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		B1EDB83F2A2BF604004B7FAD /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B1EDB8482A2BF99C004B7FAD /* SkarbListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbListView.swift; sourceTree = "<group>"; };
 		B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		B1EDB84C2A2CD03F004B7FAD /* GlobalContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContext.swift; sourceTree = "<group>"; };
+		B1EDB84E2A2CF9C0004B7FAD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B1EDB8502A2CF9D4004B7FAD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		B1EDB8522A2D0956004B7FAD /* AccountNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNetworkClient.swift; sourceTree = "<group>"; };
+		B1EDB8552A2D4112004B7FAD /* AccountDatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDatabaseClient.swift; sourceTree = "<group>"; };
 		B1FD062F29ABE1BF00180914 /* Skarban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skarban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FD063229ABE1BF00180914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1FD063429ABE1BF00180914 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +89,7 @@
 				B1FD065429ABE93600180914 /* DatabaseService.swift */,
 				B13D129A29AD44E4004ED670 /* AppService.swift */,
 				B1EDB83D2A2BF309004B7FAD /* AppwriteService.swift */,
-				B1EDB83F2A2BF604004B7FAD /* AuthenticationService.swift */,
+				B1EDB83F2A2BF604004B7FAD /* AuthenticationController.swift */,
 			);
 			path = AppServices;
 			sourceTree = "<group>";
@@ -109,11 +117,22 @@
 		B1EDB8412A2BF6E3004B7FAD /* AuthFlow */ = {
 			isa = PBXGroup;
 			children = (
-				B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */,
-				B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */,
 				B1EDB84A2A2CCC09004B7FAD /* AuthCoordinator.swift */,
+				B1EDB8462A2BF8F7004B7FAD /* LoginView.swift */,
+				B1EDB8442A2BF748004B7FAD /* LoginViewModel.swift */,
+				B1EDB84E2A2CF9C0004B7FAD /* SignUpView.swift */,
+				B1EDB8502A2CF9D4004B7FAD /* SignUpViewModel.swift */,
 			);
 			path = AuthFlow;
+			sourceTree = "<group>";
+		};
+		B1EDB8542A2D40FF004B7FAD /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				B1EDB8522A2D0956004B7FAD /* AccountNetworkClient.swift */,
+				B1EDB8552A2D4112004B7FAD /* AccountDatabaseClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		B1FD062629ABE1BF00180914 = {
@@ -145,6 +164,7 @@
 				B13D12A429AD45EA004ED670 /* Modules */,
 				B13D12A229AD45BB004ED670 /* AppServices */,
 				B13D12A129AD45AB004ED670 /* Extensions */,
+				B1EDB8542A2D40FF004B7FAD /* Clients */,
 			);
 			path = Skarban;
 			sourceTree = "<group>";
@@ -236,19 +256,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1EDB84D2A2CD03F004B7FAD /* GlobalContext.swift in Sources */,
+				B1EDB8562A2D4112004B7FAD /* AccountDatabaseClient.swift in Sources */,
 				B1FD065529ABE93600180914 /* DatabaseService.swift in Sources */,
+				B1EDB8512A2CF9D4004B7FAD /* SignUpViewModel.swift in Sources */,
 				B13D129D29AD44FC004ED670 /* Coordinator.swift in Sources */,
 				B1FD064A29ABE30D00180914 /* ApplicationCore.swift in Sources */,
 				B1FD063329ABE1BF00180914 /* AppDelegate.swift in Sources */,
+				B1EDB84F2A2CF9C0004B7FAD /* SignUpView.swift in Sources */,
 				B1EDB84B2A2CCC09004B7FAD /* AuthCoordinator.swift in Sources */,
 				B1EDB83E2A2BF309004B7FAD /* AppwriteService.swift in Sources */,
 				B1FD064E29ABE4D500180914 /* SkarbListCoordinator.swift in Sources */,
 				B1EDB8452A2BF748004B7FAD /* LoginViewModel.swift in Sources */,
+				B1EDB8532A2D0956004B7FAD /* AccountNetworkClient.swift in Sources */,
 				B1FD063D29ABE1BF00180914 /* Skarban.xcdatamodeld in Sources */,
 				B1EDB8492A2BF99C004B7FAD /* SkarbListView.swift in Sources */,
 				B13D129F29AD4511004ED670 /* SkarbanError.swift in Sources */,
 				B13D129B29AD44E4004ED670 /* AppService.swift in Sources */,
-				B1EDB8402A2BF604004B7FAD /* AuthenticationService.swift in Sources */,
+				B1EDB8402A2BF604004B7FAD /* AuthenticationController.swift in Sources */,
 				B1FD063529ABE1BF00180914 /* SceneDelegate.swift in Sources */,
 				B1FD065029ABE4DD00180914 /* SkarbListViewModel.swift in Sources */,
 				B1EDB8472A2BF8F7004B7FAD /* LoginView.swift in Sources */,

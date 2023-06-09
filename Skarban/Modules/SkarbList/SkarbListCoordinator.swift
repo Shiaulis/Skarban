@@ -14,7 +14,8 @@ final class SkarbListCoordinator: Coordinator {
 
     // MARK: - Properties -
 
-    let viewController: UIViewController = UIHostingController(rootView: SkarbListView())
+    var rootViewController: UIViewController!
+    private (set) var skarbListViewController: UIViewController!
     private let globalContext: GlobalContext
     private var disposables: Set<AnyCancellable> = []
     private var authCoordinator: AuthCoordinator?
@@ -23,6 +24,7 @@ final class SkarbListCoordinator: Coordinator {
 
     init(globalContext: GlobalContext) {
         self.globalContext = globalContext
+        setSkarbListViewController()
     }
 
     // MARK: - Public Interface
@@ -47,11 +49,15 @@ final class SkarbListCoordinator: Coordinator {
             .store(in: &disposables)
     }
 
+    private func setSkarbListViewController() {
+        self.skarbListViewController = UIHostingController(rootView: SkarbListView())
+    }
+
     private func showAuthFlow() {
         // doesn't make any sense to start auth coordinator if another one is active
         guard self.authCoordinator == nil else { return }
         let authCoordinator = AuthCoordinator(globalContext: self.globalContext)
-        authCoordinator.rootViewController = self.viewController
+        authCoordinator.rootViewController = self.skarbListViewController
         self.authCoordinator = authCoordinator
         authCoordinator.start()
     }

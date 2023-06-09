@@ -1,21 +1,22 @@
 //
-//  LoginViewModel.swift
+//  SignUpViewModel.swift
 //  Skarban
 //
 //  Created by Andrius Shiaulis on 04.06.2023.
 //
 
 import Foundation
+import os.log
 
-enum LoginCompletionAction {
-    case signUp
+enum SignUpCompletionAction {
+    case signUpCompleted
 }
 
-final class LoginViewModel {
+final class SignUpViewModel {
 
     // MARK: - Properties -
 
-    var completion: ((LoginCompletionAction) -> Void)!
+    var completion: ((SignUpCompletionAction) -> Void)!
     private let authService: AuthenticationController
 
     // MARK: - Init -
@@ -26,14 +27,10 @@ final class LoginViewModel {
 
     // MARK: - Public interface -
 
-    func login(using email: String, password: String) {
+    func signUp(email: String, password: String) {
         Task(priority: .userInitiated) {
-            await self.authService.login(email: email, password: password)
+            await self.authService.signUp(email: email, password: password)
         }
     }
 
-    func signUp() {
-        self.completion(.signUp)
-    }
-    
 }

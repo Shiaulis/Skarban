@@ -14,13 +14,11 @@ final class GlobalContext {
 
     let databaseService: DatabaseService
     let appwriteService: AppwriteService
-    let authService: AuthenticationService
 
     private var services: [AppService]  {
         [
             self.databaseService,
             self.appwriteService,
-            self.authService,
         ]
     }
 
@@ -28,8 +26,8 @@ final class GlobalContext {
 
     init(applicationName: String) {
         self.databaseService = .init(name: applicationName)
-        self.appwriteService = .init()
-        self.authService = .init()
+        let appwriteService = AppwriteService()
+        self.appwriteService = appwriteService
     }
 
     // MARK: - Public interface -

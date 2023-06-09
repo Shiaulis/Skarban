@@ -17,7 +17,7 @@ final class AppwriteService: AppService {
     // MARK: - AppService API
 
     func load() async throws {
-        self.client = Client()
+        self.client = Appwrite.Client()
             .setEndpoint("https://cloud.appwrite.io/v1")
             .setProject("647bb78335f05ef274c5")
     }
@@ -26,5 +26,13 @@ final class AppwriteService: AppService {
     func start() async throws {}
 
     func stop() async {}
+
+    func makeAccountService() -> Account {
+        .init(self.client)
+    }
+
+    func generateNewUserID() -> String {
+        ID.unique()
+    }
 
 }
