@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AppService {
+protocol ApplicationService {
     func load() async throws
     func start() async throws
     func stop() async

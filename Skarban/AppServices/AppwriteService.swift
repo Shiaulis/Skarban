@@ -7,12 +7,14 @@
 
 import Foundation
 import Appwrite
+import OSLog
 
-final class AppwriteService: AppService {
+final class AppwriteService: ApplicationService {
 
     // MARK: - Properties -
 
     private var client: Client!
+    private let logger: Logger = .init(reporterType: AppwriteService.self)
 
     // MARK: - AppService API
 
@@ -20,12 +22,17 @@ final class AppwriteService: AppService {
         self.client = Appwrite.Client()
             .setEndpoint("https://cloud.appwrite.io/v1")
             .setProject("647bb78335f05ef274c5")
+        self.logger.info("Service loaded")
     }
 
 
-    func start() async throws {}
+    func start() async throws {
+        self.logger.info("Service started")
+    }
 
-    func stop() async {}
+    func stop() async {
+        self.logger.info("Service stopped")
+    }
 
     func makeAccountService() -> Account {
         .init(self.client)

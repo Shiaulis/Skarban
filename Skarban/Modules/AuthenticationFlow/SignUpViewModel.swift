@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import os.log
 
 enum SignUpCompletionAction {
     case signUpCompleted
@@ -17,19 +16,19 @@ final class SignUpViewModel {
     // MARK: - Properties -
 
     var completion: ((SignUpCompletionAction) -> Void)!
-    private let authService: AuthenticationController
+    private let authenticationController: AuthenticationController
 
     // MARK: - Init -
 
-    init(authService: AuthenticationController) {
-        self.authService = authService
+    init(authenticationController: AuthenticationController) {
+        self.authenticationController = authenticationController
     }
 
     // MARK: - Public interface -
 
     func signUp(email: String, password: String) {
         Task(priority: .userInitiated) {
-            await self.authService.signUp(email: email, password: password)
+            await self.authenticationController.signUp(email: email, password: password)
         }
     }
 

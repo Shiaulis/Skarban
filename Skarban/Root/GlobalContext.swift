@@ -6,21 +6,29 @@
 //
 
 import Foundation
+import OSLog
 
-/// Global object that should be passed across coordinators
+/// Global object that should be passed across modules
 final class GlobalContext {
 
     // MARK: - Properties -
 
     let databaseService: DatabaseService
     let appwriteService: AppwriteService
+    let authenticationService: AuthenticationService
 
-    private var services: [AppService]  {
+    let networkClient: NetworkClient
+    let secureDatabaseClient: SecureDatabaseClient
+
+    private var services: [ApplicationService]  {
         [
             self.databaseService,
             self.appwriteService,
+            self.authenticationService,
         ]
     }
+
+    private let logger: Logger = .init(reporterType: GlobalContext.self)
 
     // MARK: - Init -
 
@@ -28,6 +36,12 @@ final class GlobalContext {
         self.databaseService = .init(name: applicationName)
         let appwriteService = AppwriteService()
         self.appwriteService = appwriteService
+        self.authenticationService = AuthenticationService()
+
+        self.networkClient = AppwriteNetworkClient(appwriteService: appwriteService)
+        self.secureDatabaseClient = KeychainSecureDatabaseClient()
+
+        self.logger.info("Global context initialized")
     }
 
     // MARK: - Public interface -
@@ -45,10 +59,12 @@ final class GlobalContext {
                     try await service.load()
                     try await service.start()
                 }
+
+                self.logger.info("Application services started")
             }
             catch {
-                // FIXME: Show error
-                assertionFailure()
+                self.logger.fault("Failed to start one of application services. Error: \(error.localizedDescription)")
+                fatalError("Failed to start one of application services. Error: \(error.localizedDescription)")
             }
         }
     }

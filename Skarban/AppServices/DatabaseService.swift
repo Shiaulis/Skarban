@@ -7,10 +7,12 @@
 
 import Foundation
 import CoreData
+import OSLog
 
-final class DatabaseService: AppService {
+final class DatabaseService: ApplicationService {
 
     private let databaseContainer: NSPersistentCloudKitContainer
+    private let logger: Logger = .init(reporterType: DatabaseService.self)
 
     init(name: String) {
         self.databaseContainer = .init(name: name)
@@ -18,10 +20,15 @@ final class DatabaseService: AppService {
 
     func load() async throws {
         try await self.databaseContainer.loadPersistentStores()
+        self.logger.info("Service loaded")
     }
 
-    func start() async throws {}
+    func start() async throws {
+        self.logger.info("Service started")
+    }
 
-    func stop() async {}
+    func stop() async {
+        self.logger.info("Service stopped")
+    }
 
 }

@@ -18,48 +18,59 @@ final class SkarbListCoordinator: Coordinator {
     private (set) var skarbListViewController: UIViewController!
     private let globalContext: GlobalContext
     private var disposables: Set<AnyCancellable> = []
-    private var authCoordinator: AuthCoordinator?
+    private var authenticationCoordinator: AuthenticationCoordinator?
+    private let controller: SkarbListController
 
     // MARK: - Init -
 
     init(globalContext: GlobalContext) {
+        self.controller = .init(globalContext: globalContext)
         self.globalContext = globalContext
+
+        configureController()
         setSkarbListViewController()
     }
 
     // MARK: - Public Interface
 
     func start() {
-        bindAuthState()
+        self.controller.start()
     }
 
-    func stop() {}
+    func stop() {
+        self.controller.stop()
+    }
 
     // MARK: - Private Interface
-
-    private func bindAuthState() {
-        self.globalContext.authService.$state
-            .sink { [weak self] state in
-                guard let self else { return }
-                switch state {
-                    case .notAuthenticated: self.showAuthFlow()
-                    default: break
-                }
-            }
-            .store(in: &disposables)
-    }
 
     private func setSkarbListViewController() {
         self.skarbListViewController = UIHostingController(rootView: SkarbListView())
     }
 
-    private func showAuthFlow() {
+    private func showAuthenticationFlow() {
         // doesn't make any sense to start auth coordinator if another one is active
-        guard self.authCoordinator == nil else { return }
-        let authCoordinator = AuthCoordinator(globalContext: self.globalContext)
+        guard self.authenticationCoordinator == nil else { return }
+        let authCoordinator = AuthenticationCoordinator(globalContext: self.globalContext)
         authCoordinator.rootViewController = self.skarbListViewController
-        self.authCoordinator = authCoordinator
+        authCoordinator.completion = { [weak self] action in
+            guard let self else { return }
+            switch action {
+                case .dismiss:
+                    self.authenticationCoordinator?.stop()
+                    self.authenticationCoordinator = nil
+            }
+        }
+        self.authenticationCoordinator = authCoordinator
         authCoordinator.start()
+    }
+
+    private func configureController() {
+        self.controller.completion = { [weak self] action in
+            guard let self else { return }
+            switch action {
+                case .showAuthenticationFlow: self.showAuthenticationFlow()
+            }
+        }
     }
 
 }
