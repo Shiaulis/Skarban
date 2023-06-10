@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct LoginView: View {
 
     // MARK: - Properties -
+
+    @Environment(\.colorScheme) var colorScheme
 
     @State var email: String = ""
     @State var password: String = ""
@@ -40,6 +43,12 @@ struct LoginView: View {
                 self.viewModel.signUp()
             }
             .buttonStyle(.borderedProminent)
+            if colorScheme.self == .dark {
+                SignInButton(SignInWithAppleButton.Style.whiteOutline)
+            }
+            else {
+                SignInButton(SignInWithAppleButton.Style.black)
+            }
         }
         .padding(.horizontal)
         .onAppear {
@@ -49,6 +58,16 @@ struct LoginView: View {
             self.viewModel.disappear()
         }
         .interactiveDismissDisabled()
+    }
+
+    private func SignInButton(_ type: SignInWithAppleButton.Style) -> some View{
+        return SignInWithAppleButton(.continue) { request in
+            request.requestedScopes = LoginViewModel.requestScopes
+        } onCompletion: { result in
+            self.viewModel.handleSignInResult(with: result)
+        }
+        .frame(width: 280, height: 40, alignment: .center)
+        .signInWithAppleButtonStyle(type)
     }
 }
 

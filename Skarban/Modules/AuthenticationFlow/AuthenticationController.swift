@@ -7,13 +7,13 @@
 
 import Foundation
 import OSLog
+import AuthenticationServices
 
 /// Module that provides possibility to register new account or login into existing one.
 protocol AuthenticationController: ModuleController {
-
     func login(email: String, password: String) async
     func signUp(email:String, password: String) async
-
+    func handleLogin(_ result: Result<ASAuthorization, Error>)
 }
 
 final class NetworkAuthenticationController: AuthenticationController {
@@ -55,6 +55,37 @@ final class NetworkAuthenticationController: AuthenticationController {
         }
     }
 
+    func handleLogin(_ result: Result<ASAuthorization, Error>) {
+        switch result {
+            case .success(let authorization):
+                handle(authorization)
+            case .failure(let error):
+                handleLoginError(error)
+        }
+    }
+
+    // MARK: - Private API -
+
+    private func handle(_ authorization: ASAuthorization) {
+        switch authorization.credential {
+            case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                let email = appleIDCredential.email
+                let firstName = appleIDCredential.fullName?.givenName
+                let lastName = appleIDCredential.fullName?.familyName
+                let userID = appleIDCredential.user
+
+                Task {
+                    try! await self.networkClient.createOAuthSession()
+                }
+            default:
+                assertionFailure()
+        }
+    }
+
+    private func handleLoginError(_ error: Error) {
+        assertionFailure()
+    }
+
 }
 
 final class InMemoryAuthenticationController: AuthenticationController {
@@ -62,6 +93,7 @@ final class InMemoryAuthenticationController: AuthenticationController {
     func start() {}
     func login(email: String, password: String) async {}
     func signUp(email: String, password: String) async {}
+    func handleLogin(_ result: Result<ASAuthorization, Error>) {}
     func stop() {}
 
 }

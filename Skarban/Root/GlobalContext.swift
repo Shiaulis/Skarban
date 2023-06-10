@@ -38,7 +38,7 @@ final class GlobalContext {
         self.appwriteService = appwriteService
         self.authenticationService = AuthenticationService()
 
-        self.networkClient = AppwriteNetworkClient(appwriteService: appwriteService)
+        self.networkClient = AppwriteNetworkClient(authenticationService: self.authenticationService)
         self.secureDatabaseClient = KeychainSecureDatabaseClient()
 
         self.logger.info("Global context initialized")

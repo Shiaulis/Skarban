@@ -7,6 +7,7 @@
 
 import Foundation
 import OSLog
+import AuthenticationServices
 
 enum LoginCompletionAction {
     case signUp
@@ -17,6 +18,7 @@ final class LoginViewModel {
 
     // MARK: - Properties -
 
+    static var requestScopes: [ASAuthorization.Scope] = [.fullName, .email]
     var completion: ((LoginCompletionAction) -> Void)!
     private let authenticationController: AuthenticationController
     private let logger: Logger = .init(reporterType: LoginViewModel.self)
@@ -47,5 +49,9 @@ final class LoginViewModel {
     func signUp() {
         self.completion(.signUp)
     }
-    
+
+    func handleSignInResult(with result: Result<ASAuthorization, Error>) {
+        self.authenticationController.handleLogin(result)
+    }
+
 }

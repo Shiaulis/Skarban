@@ -10,9 +10,8 @@ import Appwrite
 
 /// Client to do tasks on a network layer
 protocol NetworkClient: ApplicationClient {
-
     func createAccount(email: String, password: String) async throws -> AccountUser
-
+    func createOAuthSession() async throws
 }
 
 struct AccountSession {
@@ -59,9 +58,15 @@ final class AppwriteNetworkClient: NetworkClient {
         let session = try await self.accountEndpoint.createEmailSession(email: "", password: "")
         return AccountSession(session: session)
     }
+
+    func createOAuthSession() async throws {
+        let session = try await self.accountEndpoint.createOAuth2Session(provider: "apple")
+    }
+
 }
 
 final class InMemoryNetworkClient: NetworkClient {
+    func createOAuthSession() async throws {}
 
     func createAccount(email: String, password: String) async throws -> AccountUser {
         .init()
