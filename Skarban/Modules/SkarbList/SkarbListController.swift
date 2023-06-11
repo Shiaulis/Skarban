@@ -14,6 +14,7 @@ final class SkarbListController: ModuleController {
 
     enum CompletionAction {
         case showAuthenticationFlow
+        case dismissAuthenticationFlow
     }
 
     // MARK: - Properties -
@@ -52,6 +53,7 @@ final class SkarbListController: ModuleController {
                 guard let self else { return }
                 switch state {
                     case .notAuthenticated: self.completion(.showAuthenticationFlow)
+                    case .authenticated: self.completion(.dismissAuthenticationFlow)
                     default: break
                 }
             }

@@ -11,7 +11,7 @@
 		B13D129D29AD44FC004ED670 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D129C29AD44FC004ED670 /* Coordinator.swift */; };
 		B13D129F29AD4511004ED670 /* SkarbanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D129E29AD4511004ED670 /* SkarbanError.swift */; };
 		B16702E12A33C1C000253ACA /* ApplicationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16702E02A33C1C000253ACA /* ApplicationClient.swift */; };
-		B16702E42A345B3300253ACA /* AuthenticationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16702E32A345B3300253ACA /* AuthenticationMonitor.swift */; };
+		B16702E42A345B3300253ACA /* AuthenticationMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16702E32A345B3300253ACA /* AuthenticationMonitorDelegate.swift */; };
 		B16702E62A345CBD00253ACA /* Logger+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16702E52A345CBD00253ACA /* Logger+Init.swift */; };
 		B16702E82A3462B200253ACA /* SkarbListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16702E72A3462B200253ACA /* SkarbListController.swift */; };
 		B16702EA2A3466D800253ACA /* ModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16702E92A3466D800253ACA /* ModuleController.swift */; };
@@ -46,7 +46,7 @@
 		B13D129E29AD4511004ED670 /* SkarbanError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbanError.swift; sourceTree = "<group>"; };
 		B140AB6E2A34D09200498E16 /* Skarban.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Skarban.entitlements; sourceTree = "<group>"; };
 		B16702E02A33C1C000253ACA /* ApplicationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationClient.swift; sourceTree = "<group>"; };
-		B16702E32A345B3300253ACA /* AuthenticationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMonitor.swift; sourceTree = "<group>"; };
+		B16702E32A345B3300253ACA /* AuthenticationMonitorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMonitorDelegate.swift; sourceTree = "<group>"; };
 		B16702E52A345CBD00253ACA /* Logger+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Init.swift"; sourceTree = "<group>"; };
 		B16702E72A3462B200253ACA /* SkarbListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkarbListController.swift; sourceTree = "<group>"; };
 		B16702E92A3466D800253ACA /* ModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleController.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		B16702E22A345B1F00253ACA /* Monitors */ = {
 			isa = PBXGroup;
 			children = (
-				B16702E32A345B3300253ACA /* AuthenticationMonitor.swift */,
+				B16702E32A345B3300253ACA /* AuthenticationMonitorDelegate.swift */,
 			);
 			path = Monitors;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 				B1FD065029ABE4DD00180914 /* SkarbListViewModel.swift in Sources */,
 				B1EDB8472A2BF8F7004B7FAD /* LoginView.swift in Sources */,
 				B16702E12A33C1C000253ACA /* ApplicationClient.swift in Sources */,
-				B16702E42A345B3300253ACA /* AuthenticationMonitor.swift in Sources */,
+				B16702E42A345B3300253ACA /* AuthenticationMonitorDelegate.swift in Sources */,
 				B1AE60A12A34EF02002D2B22 /* SignUpView.swift in Sources */,
 				B1FD065729ABEB1D00180914 /* NSPersistentCloudKitContainer+Async.swift in Sources */,
 				B1BC404B2A33BD6A0010F1B6 /* AuthenticationService.swift in Sources */,

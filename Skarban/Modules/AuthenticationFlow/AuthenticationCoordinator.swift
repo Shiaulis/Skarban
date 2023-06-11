@@ -49,6 +49,7 @@ final class AuthenticationCoordinator: Coordinator {
 
     func stop() {
         self.controller.stop()
+        self.loginViewModel.stop()
     }
 
     // MARK: - Private interface

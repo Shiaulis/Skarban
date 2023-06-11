@@ -24,11 +24,11 @@ final class DatabaseService: ApplicationService {
     }
 
     func start() async throws {
-        self.logger.info("Service started")
+        self.logger.info("Database service started")
     }
 
     func stop() async {
-        self.logger.info("Service stopped")
+        self.logger.info("Database service stopped")
     }
 
 }

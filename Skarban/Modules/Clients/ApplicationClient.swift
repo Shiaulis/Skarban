@@ -8,4 +8,4 @@
 import Foundation
 
 /// Lightweight worker that runs tasks in specified domain
-protocol ApplicationClient {}
+protocol ApplicationClient: AnyObject {}

@@ -64,11 +64,19 @@ final class SkarbListCoordinator: Coordinator {
         authCoordinator.start()
     }
 
+    private func dismissAuthenticationFlow() {
+        // nothing to dismiss 🤷🏾
+        guard let authenticationCoordinator else { return }
+
+        authenticationCoordinator.stop()
+    }
+
     private func configureController() {
         self.controller.completion = { [weak self] action in
             guard let self else { return }
             switch action {
                 case .showAuthenticationFlow: self.showAuthenticationFlow()
+                case .dismissAuthenticationFlow: self.dismissAuthenticationFlow()
             }
         }
     }

@@ -32,8 +32,13 @@ struct LoginView: View {
                 .font(.title)
             TextField("email", text: $email)
                 .textFieldStyle(.roundedBorder)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
             SecureField("password", text: $password)
                 .textFieldStyle(.roundedBorder)
+                .onSubmit {
+                    self.viewModel.login(using: self.email, password: self.password)
+                }
             Button("Login") {
                 self.viewModel.login(using: self.email, password: self.password)
             }
@@ -50,7 +55,7 @@ struct LoginView: View {
                 SignInButton(SignInWithAppleButton.Style.black)
             }
         }
-        .padding(.horizontal)
+        .padding()
         .onAppear {
             self.viewModel.appear()
         }

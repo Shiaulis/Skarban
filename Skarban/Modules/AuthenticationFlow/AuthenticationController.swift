@@ -11,7 +11,7 @@ import AuthenticationServices
 
 /// Module that provides possibility to register new account or login into existing one.
 protocol AuthenticationController: ModuleController {
-    func login(email: String, password: String) async
+    func login(email: String, password: String) async throws
     func signUp(email:String, password: String) async
     func handleLogin(_ result: Result<ASAuthorization, Error>)
 }
@@ -41,14 +41,16 @@ final class NetworkAuthenticationController: AuthenticationController {
         self.logger.info("Network Authentication Controller stopped")
     }
 
-    func login(email: String, password: String) async {
-        self.logger.debug("Login not implemented yet. Login: \(email), password: \(password)")
+    func login(email: String, password: String) async throws {
+        let session = try await self.networkClient.startAccountSession(email: email, password: password)
+        try await self.secureDatabaseClient.store(session, forKey: .accountSession)
+         assertionFailure()
     }
 
     func signUp(email:String, password: String) async {
         do {
             let accountUser = try await self.networkClient.createAccount(email: email, password: password)
-            try await self.secureDatabaseClient.store(accountUser: accountUser)
+            assertionFailure()
         }
         catch {
             assertionFailure()
@@ -67,19 +69,21 @@ final class NetworkAuthenticationController: AuthenticationController {
     // MARK: - Private API -
 
     private func handle(_ authorization: ASAuthorization) {
-        switch authorization.credential {
-            case let appleIDCredential as ASAuthorizationAppleIDCredential:
-                let email = appleIDCredential.email
-                let firstName = appleIDCredential.fullName?.givenName
-                let lastName = appleIDCredential.fullName?.familyName
-                let userID = appleIDCredential.user
+        /*
+         switch authorization.credential {
+             case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                 let email = appleIDCredential.email
+                 let firstName = appleIDCredential.fullName?.givenName
+                 let lastName = appleIDCredential.fullName?.familyName
+                 let userID = appleIDCredential.user
 
-                Task {
-                    try! await self.networkClient.createOAuthSession()
-                }
-            default:
-                assertionFailure()
-        }
+                 Task {
+                     try! await self.networkClient.createOAuthSession()
+                 }
+             default:
+                 assertionFailure()
+         }
+         */
     }
 
     private func handleLoginError(_ error: Error) {

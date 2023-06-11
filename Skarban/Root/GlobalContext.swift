@@ -36,10 +36,11 @@ final class GlobalContext {
         self.databaseService = .init(name: applicationName)
         let appwriteService = AppwriteService()
         self.appwriteService = appwriteService
-        self.authenticationService = AuthenticationService()
-
-        self.networkClient = AppwriteNetworkClient(authenticationService: self.authenticationService)
         self.secureDatabaseClient = KeychainSecureDatabaseClient()
+        self.authenticationService = AuthenticationService(secureDatabaseClient: self.secureDatabaseClient)
+
+        self.networkClient = AppwriteNetworkClient()
+        self.networkClient.authenticationMonitorDelegate = self.authenticationService
 
         self.logger.info("Global context initialized")
     }

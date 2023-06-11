@@ -27,11 +27,11 @@ final class AppwriteService: ApplicationService {
 
 
     func start() async throws {
-        self.logger.info("Service started")
+        self.logger.info("Appwrite service started")
     }
 
     func stop() async {
-        self.logger.info("Service stopped")
+        self.logger.info("Appwrite service stopped")
     }
 
     func makeAccountService() -> Account {

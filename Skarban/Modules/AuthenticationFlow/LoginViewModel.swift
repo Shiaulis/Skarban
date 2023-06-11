@@ -42,7 +42,12 @@ final class LoginViewModel {
 
     func login(using email: String, password: String) {
         Task(priority: .userInitiated) {
-            await self.authenticationController.login(email: email, password: password)
+            do {
+                try await self.authenticationController.login(email: email, password: password)
+            }
+            catch {
+                assertionFailure()
+            }
         }
     }
 
@@ -52,6 +57,10 @@ final class LoginViewModel {
 
     func handleSignInResult(with result: Result<ASAuthorization, Error>) {
         self.authenticationController.handleLogin(result)
+    }
+
+    func stop() {
+        self.completion(.dismiss)
     }
 
 }
